@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff1e1e1e"
+    android:padding="40dip"
+    tools:context=".ServerActivity" >
+
+    <com.yadong.droidcontrol.VerticalSeekBar
+        android:id="@+id/speedSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/t_seekbar"
+        android:thumb="@drawable/seek_button" />
+
+    <TextView
+        android:id="@+id/debugInfo"
+        android:layout_width="300dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="40dip"
+        android:background="#fff4f4f4" />
+
+    <EditText
+        android:id="@+id/ipAddressText"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/debugInfo"
+        android:hint="input ip address here"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ipAddressText"
+        android:layout_marginBottom="40dip"
+        android:layout_toRightOf="@id/debugInfo"
+        android:text="Connect" />
+
+    <Switch
+        android:id="@+id/runDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectButton"
+        android:layout_toRightOf="@id/debugInfo"
+        android:layout_marginBottom="20dp"
+        android:text="前进方向" />
+
+    <CheckBox
+        android:id="@+id/frontLED"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/runDirection"
+        android:layout_toRightOf="@id/debugInfo"
+        android:text="前灯" />
+
+    <CheckBox
+        android:id="@+id/backLED"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/runDirection"
+        android:layout_toRightOf="@id/frontLED"
+        android:text="后灯" />
+
+    <SeekBar
+        android:id="@+id/cameraDirection"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frontLED"
+        android:layout_marginTop="40dip"
+        android:layout_toRightOf="@id/debugInfo"
+        android:progressDrawable="@drawable/t_seekbar"
+        android:max="100"
+        android:progress="50"
+        android:thumb="@drawable/seek_button" />
+
+    <SeekBar
+        android:id="@+id/directionSeekBar"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cameraDirection"
+        android:layout_marginBottom="40dip"
+        android:layout_marginTop="40dip"
+        android:layout_toRightOf="@id/debugInfo"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/empty_seek_bar"
+        android:thumb="@drawable/seek_2" />
+
+
+</RelativeLayout>
